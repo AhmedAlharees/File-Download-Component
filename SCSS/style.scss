@@ -1,0 +1,56 @@
+@import "./_reset.scss";
+@import "./mixins.scss";
+body {
+  height: 100vh;
+  @include flex;
+  background-image: linear-gradient(to left bottom, #41b1d6, #2d77ad);
+}
+
+.card {
+  background-image: linear-gradient(to right top, #218db1, #3285c2);
+  box-shadow: 10px 10px 30px black;
+  @include setBorder(20px);
+  @include setDiminsions(500px, 400px);
+  margin: 10px;
+  padding: 15px;
+  &__header {
+    font-size: clamp(1rem, 1.3rem + 2vw, 2rem);
+    @include fontStyling(400, white);
+    padding: 1rem;
+    @include fontShadow;
+  }
+  &__explain {
+    @include fontStyling(400, white);
+    font-size: clamp(1rem, 0.5rem + 1vw, 1.5rem);
+    padding-bottom: 20px;
+    @include fontShadow;
+  }
+  &__input {
+    width: 100%;
+    margin-bottom: 30px;
+    & input {
+      all: unset;
+      text-align: center;
+      background-color: white;
+      width: 100%;
+      height: 65px;
+      font-size: 20px;
+      @include setBorder(20px);
+    }
+  }
+  &__downloadbutton {
+    all: unset;
+    text-align: center;
+    @include fontShadow;
+    color: white;
+    @include setBorder(30px);
+    width: 100%;
+    height: 50px;
+    box-shadow: 2px 3px 10px black;
+    background-image: linear-gradient(to left bottom, #7749f9, #37a99f);
+  }
+}
+
+button:active {
+  background-image: linear-gradient(to left bottom, #7516f1, #203a71);
+}

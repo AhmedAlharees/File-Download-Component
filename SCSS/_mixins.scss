@@ -1,0 +1,24 @@
+@mixin setBorder($width){
+    border-radius: $width;
+}
+
+@mixin fontStyling($weight, $color, $align: center){
+    font-weight: $weight;
+    text-align: $align;
+    color: $color;
+}
+
+@mixin setDiminsions($width, $height){
+    max-width: $width;
+    height: $height;
+}
+
+@mixin flex($jusitfy: center, $align: center){
+    display: flex;
+    justify-content: $jusitfy;
+    align-items: $align;
+}
+
+@mixin fontShadow{
+    text-shadow: 2px 2px 1px black;
+}
